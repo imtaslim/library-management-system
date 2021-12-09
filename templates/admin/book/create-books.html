@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Book | LMS</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../asset/assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../asset/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../asset/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../asset/assets/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../asset/assets/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../asset/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../asset/assets/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../asset/assets/plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="../asset/assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/admin" class="nav-link">Admin Panel</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/admin" class="brand-link">
+      <img src="../asset/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Admin Panel</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="/admin" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-list-alt"></i>
+                <p>
+                  Categories
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/categories/create" class="nav-link">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <p>Add</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/categories" class="nav-link">
+                    <i class="fa fa-table" aria-hidden="true"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link active">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <p>
+                  Books
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/books/create" class="nav-link active">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <p>Add</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/books" class="nav-link">
+                    <i class="fa fa-table" aria-hidden="true"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa fa-user"></i>                
+                <p>
+                  Users
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/users" class="nav-link">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <p>User List</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/bookinglist" class="nav-link">
+                    <i class="fas fa-book-open"></i>
+                    <p>Bookings List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="/change-admin-password" class="nav-link">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <p>Change Password</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <p>Logout</p>
+              </a>
+            </li>
+          </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Add a new book</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-6 col-6">
+            <form method="post" action="/books/store" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Book Image</label>
+                    <p><img id="output" width="100" /></p>
+                    <input type="file"  accept="image/*" name="Image" id="file" class="form-control" onchange="loadFile(event)">
+                    <small class="text-danger">{{.Errors.Image}}</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Books Name</label>
+                    <input class="form-control" value="{{.Book.Name}}" name="Name" type="text" placeholder="Enter Book Name">
+                    <small class="text-danger">{{.Errors.Name}}</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Author Name</label>
+                    <input class="form-control" value="{{.Book.Author_Name}}" name="Author_Name" type="text" placeholder="Enter Book Author">
+                    <small class="text-danger">{{.Errors.Author_Name}}</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Details</label>
+                    <textarea class="form-control" name="Details" cols="30" rows="3" placeholder="Enter Book Details">{{.Book.Details}}</textarea>
+                    <small class="text-danger">{{.Errors.Details}}</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Category Name</label>
+                    <select class="form-control" aria-label="Default select example" name="Cat_ID">
+                        <option value="" selected>Select a Category</option>
+                        {{ range .Category}}
+                        <option value="{{.ID}}">{{.Name}}</option>
+                        {{end}}
+                    </select>
+                    <small class="text-danger">{{.Errors.Cat_ID}}</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Book</button>
+            </form>
+            <br><br>
+            </div>
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../asset/assets/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../asset/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="../asset/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../asset/assets/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../asset/assets/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../asset/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../asset/assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../asset/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../asset/assets/plugins/moment/moment.min.js"></script>
+<script src="../asset/assets/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../asset/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../asset/assets/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../asset/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../asset/assets/dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../asset/assets/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../asset/assets/dist/js/pages/dashboard.js"></script>
+</body>
+<script>
+    var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
+</html>

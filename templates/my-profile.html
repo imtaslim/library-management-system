@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--title-->
+    <title>{{.Name}}'s Profile</title>
+
+    <!-- Head Global Code Include Start---------------->
+        <!--favicon icon-->
+    <link rel="icon" href="../asset/assets/logo/favicon.png" type="image/png" sizes="16x16">
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600&amp;display=swap"
+          rel="stylesheet">
+
+     <!--google fonts-->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600&amp;display=swap"
+     rel="stylesheet">
+
+<!--Bootstrap css-->
+<link rel="stylesheet" href="../asset/assets/user/css/bootstrap.min.css">
+<!--Magnific popup css-->
+<link rel="stylesheet" href="../asset/assets/user/css/magnific-popup.css">
+<!--Themify icon css-->
+<link rel="stylesheet" href="../asset/assets/user/css/themify-icons.css">
+<!--Fontawesome icon css-->
+<link rel="stylesheet" href="../asset/assets/user/css/all.min.css">
+<!--animated css-->
+<link rel="stylesheet" href="../asset/assets/user/css/animate.min.css">
+<!--ytplayer css-->
+<link rel="stylesheet" href="../asset/assets/user/css/jquery.mb.YTPlayer.min.css">
+<!--Owl carousel css-->
+<link rel="stylesheet" href="../asset/assets/user/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../asset/assets/user/css/owl.theme.default.min.css">
+<!--custom css-->
+<link rel="stylesheet" href="../asset/assets/user/css/style.css">
+<!--responsive css-->
+<link rel="stylesheet" href="../asset/assets/user/css/responsive.css">
+<style>
+        .pricing-section{
+            background: #EAECEE;
+        }
+        .slider-img .image-wrap img{
+            
+            width: 665px;
+        }
+        .promo-section .text-center{
+            text-align: center;
+        }
+        .promo-section p{
+            color: #707070;
+        }
+        .login-content{
+            margin-top: 30px;
+        }
+        .work-process-section .process-content{
+            height: 115px;
+        }
+        .hero-slider-content h1{
+            font-size: 35px;
+        }
+        .hero-slider-content .outline-btn, .secondary-solid-btn, .primary-solid-btn, .solid-white-btn, .outline-white-btn, .secondary-outline-btn {
+            padding: 12px 12px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .service-icon img{
+            width: 50px;
+        }
+        .free-trial-image{
+            background-image: url(img/section-img-1.jpg);
+        }
+        .free-trial-image:before{
+            background: none !important;
+        }
+        .mobile-on{
+            display: none;
+        }
+        .free-trial-image{
+            background-size: contain;
+        }
+        @media only screen and (max-width: 992px) {
+            .slider-img .image-wrap img{
+                width: auto;
+                margin: 0 auto;
+                display: none;
+            }
+            .mobile-on{
+            display: block;
+        }
+        }
+
+        .order-price input{
+            font-size: 22px;
+            height: 50px;
+        }
+        .content{
+            margin-left: 10px;
+            color: black;
+            
+        }
+        .content td, .content th{
+            border: 1px solid #ccc; 
+            min-width: 120px;
+        }
+        .nav{
+            border: 1px solid #ccc;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<!--loader start-->
+<div id="preloader">
+    <div class="loader1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--loader end-->
+
+<!--header section start-->
+<header class="header">
+    <!--topbar start-->
+    <!--topbar end-->
+    <!--start navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top gradient-bg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="../asset/assets/logo/favicon.png" class="shadow-lg-white" alt="logo"/>
+                
+            </a>
+            <a class="navbar-brand" href="/">
+                <h3>LMS</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="ti-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse h-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto menu">
+                    <li><a href="/"> Home</a></li>
+                    <li><a href="/my-bookings">My Bookings</a></li>
+                    <li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--header section end-->
+
+<!--body content wrap start-->
+<div class="main">
+   <div class="container py-4">
+      <br>
+      <br>
+      <br>
+      <div class="row ml-4">
+        <h3>{{.Name}}'s Profile</h3>
+        {{if .Messege}}
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{.Messege}}</strong>
+            </div>
+        {{end}}
+      </div>
+        
+       <!-- Product Card //-->
+          <div class="row">
+            <div class="card col-5 m-5 p-3">
+                <div class="card-header">
+                    Update Profile
+                </div>
+                <div class="card-body align-bottom">
+                    <form method="post" action="/updateProfile">
+                        <div class="form-group align-middle">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input class="form-control" name="Name" type="text" value="{{.Name}}">
+                            <small class="text-danger">{{.Error.Name}}</small>
+                        </div>
+                        <div class="form-group align-middle">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input class="form-control" name="Email" type="email" value="{{.Email}}">
+                            <small class="text-danger">{{.Error.Email}}</small>
+                        </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-dark">Update</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card col-5 m-5 p-3">
+                <div class="card-header">
+                    Change Password
+                </div>
+                <div class="card-body">
+                    <form method="post" action="/changePassword">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Old Password</label>
+                            <input class="form-control" name="Old_Password" type="password" placeholder="Enter Old Password...">
+                            <small class="text-danger">{{.Error.Old_password}}</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">New Password</label>
+                            <input class="form-control" name="Password" type="password" placeholder="Enter New Password...">
+                            <small class="text-danger">{{.Error.Password}}</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Confirm Password</label>
+                            <input class="form-control" name="Confirm" type="password" placeholder="Enter Confirm Password...">
+                            <small class="text-danger">{{.Error.Confirm}}</small>
+                        </div>
+                </div>
+                <div class="card-footer">
+                    <div >
+                        <button type="submit" class="btn btn-dark">Change</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+          </div>
+       </div>
+</div>
+<!--body content wrap end-->
+
+
+<!-- Footer Global Code Include Start---------------->
+<!--footer section start-->
+<footer class="footer-section fixed-bottom">
+    <!--footer top start-->
+    <div>
+    </div>
+    <!--footer top end-->
+
+    <!--footer copyright start-->
+    <div class="footer-bottom gray-light-bg py-2">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-5 col-lg-5">
+                    <p class="copyright-text pb-0 mb-0">Copyrights © 2021. All
+                        rights reserved by
+                        <a href="/" target="_blank">LMS</a></p>
+                </div>
+                <div class="col-md-7 col-lg-6 d-none d-md-block d-lg-block">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer copyright end-->
+</footer>
+<!--footer section end-->
+<!-- Footer Global Code Include End---------------->
+
+
+<!--jQuery-->
+<script src="../asset/assets/user/js/jquery-3.5.0.min.js"></script>
+<!--Popper js-->
+<script src="../asset/assets/user/js/popper.min.js"></script>
+<!--Bootstrap js-->
+<script src="../asset/assets/user/js/bootstrap.min.js"></script>
+<!--Magnific popup js-->
+<script src="../asset/assets/user/js/jquery.magnific-popup.min.js"></script>
+<!--jquery easing js-->
+<script src="../asset/assets/user/js/jquery.easing.min.js"></script>
+<!--jquery ytplayer js-->
+<script src="../asset/assets/user/js/jquery.mb.YTPlayer.min.js"></script>
+<!--Isotope filter js-->
+<script src="../asset/assets/user/js/mixitup.min.js"></script>
+<!--wow js-->
+<script src="../asset/assets/user/js/wow.min.js"></script>
+<!--owl carousel js-->
+<script src="../asset/assets/user/js/owl.carousel.min.js"></script>
+<!--countdown js-->
+<script src="../asset/assets/user/js/jquery.countdown.min.js"></script>
+<!--jquery easypiechart-->
+<script src="../asset/assets/user/js/jquery.easy-pie-chart.js"></script>
+<!--custom js-->
+<script src="../asset/assets/user/js/scripts.js"></script>
+</body>
+</html>

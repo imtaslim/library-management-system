@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--title-->
+    <title>{{.Name}} Details</title>
+
+    <!-- Head Global Code Include Start---------------->
+        <!--favicon icon-->
+    <link rel="icon" href="../asset/assets/logo/favicon.png" type="image/png" sizes="16x16">
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600&amp;display=swap"
+          rel="stylesheet">
+
+     <!--google fonts-->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600&amp;display=swap"
+     rel="stylesheet">
+
+<!--Bootstrap css-->
+<link rel="stylesheet" href="../asset/assets/user/css/bootstrap.min.css">
+<!--Magnific popup css-->
+<link rel="stylesheet" href="../asset/assets/user/css/magnific-popup.css">
+<!--Themify icon css-->
+<link rel="stylesheet" href="../asset/assets/user/css/themify-icons.css">
+<!--Fontawesome icon css-->
+<link rel="stylesheet" href="../asset/assets/user/css/all.min.css">
+<!--animated css-->
+<link rel="stylesheet" href="../asset/assets/user/css/animate.min.css">
+<!--ytplayer css-->
+<link rel="stylesheet" href="../asset/assets/user/css/jquery.mb.YTPlayer.min.css">
+<!--Owl carousel css-->
+<link rel="stylesheet" href="../asset/assets/user/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../asset/assets/user/css/owl.theme.default.min.css">
+<!--custom css-->
+<link rel="stylesheet" href="../asset/assets/user/css/style.css">
+<!--responsive css-->
+<link rel="stylesheet" href="../asset/assets/user/css/responsive.css">
+<style>
+        .pricing-section{
+            background: #EAECEE;
+        }
+        .slider-img .image-wrap img{
+            
+            width: 665px;
+        }
+        .promo-section .text-center{
+            text-align: center;
+        }
+        .promo-section p{
+            color: #707070;
+        }
+        .login-content{
+            margin-top: 30px;
+        }
+        .work-process-section .process-content{
+            height: 115px;
+        }
+        .hero-slider-content h1{
+            font-size: 35px;
+        }
+        .hero-slider-content .outline-btn, .secondary-solid-btn, .primary-solid-btn, .solid-white-btn, .outline-white-btn, .secondary-outline-btn {
+            padding: 12px 12px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .service-icon img{
+            width: 50px;
+        }
+        .free-trial-image{
+            background-image: url(img/section-img-1.jpg);
+        }
+        .free-trial-image:before{
+            background: none !important;
+        }
+        .mobile-on{
+            display: none;
+        }
+        .free-trial-image{
+            background-size: contain;
+        }
+        @media only screen and (max-width: 992px) {
+            .slider-img .image-wrap img{
+                width: auto;
+                margin: 0 auto;
+                display: none;
+            }
+            .mobile-on{
+            display: block;
+        }
+        }
+
+        .order-price input{
+            font-size: 22px;
+            height: 50px;
+        }
+        .content{
+            margin-left: 10px;
+            color: black;
+            
+        }
+        .content td, .content th{
+            border: 1px solid #ccc; 
+            min-width: 120px;
+        }
+        .nav{
+            border: 1px solid #ccc;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<!--loader start-->
+<div id="preloader">
+    <div class="loader1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--loader end-->
+
+<!--header section start-->
+<header class="header">
+    <!--topbar start-->
+    <!--topbar end-->
+    <!--start navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top gradient-bg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="../asset/assets/logo/favicon.png" class="shadow-lg-white" alt="logo"/>
+                
+            </a>
+            <a class="navbar-brand" href="/">
+                <h3>LMS</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="ti-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse h-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto menu">
+                    <li><a href="/"> Home</a></li>
+                    <li><a href="/my-bookings">My Bookings</a></li>
+                    <li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--header section end-->
+
+<!--body content wrap start-->
+<div class="main">
+   <div class="container py-4">
+      <br>
+      <br>
+      <br><br>
+       <!-- Product Card //-->
+       <div class="card card-body mb-5">
+          <div class="row row-cols-1 row-cols-lg-2 g-2">
+            
+             <!-- Section: Product Image #1 //-->
+             <div class="col d-none d-lg-block">
+                <img class="w-100 rounded"
+                     src="/asset/{{.Image}}" />
+             </div>
+             <!-- Section: Product Body //-->
+             <div class="col">
+                <div class="h-100 d-flex flex-column">
+                   <!-- Section: Product Infomation //-->
+                   <div class="flex-grow-1">
+                      <div class="h-100 d-flex flex-column">
+                         <div class="flex-grow-1">
+                            <div class="row row-cols-auto mb-3 g-1 text-uppercase">
+                               <div class="col">
+                                  <span class="badge bg-success text-white rounded-pill">Book</span>
+                               </div>
+                            </div>
+                            <h5 class="text-muted text-uppercase mb-1">{{.Cat_name}}</h5>
+                            <h3>{{.Name}}</h3>
+                            <div class="fs-4 fw-bold mb-2">Author: {{.Author_Name}}</div>
+                            <p>{{.Details}}</p>
+                         </div>
+                         <p class="small mb-0"><span class="fw-bold">Release date:</span> {{.ReleaseDate}}</p>
+                      </div>
+                   </div>
+                   <!-- Section: Product Quantity //-->
+                   <div class="mt-2">
+                      <hr class="mt-0 mb-2" />
+                      <div class="d-flex flex-row flex-wrap flex-md-nowrap align-items-center">
+                         <div class="mt-2 d-flex flex-row flex-nowrap align-items-center">
+                            {{if .Status}}
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" onclick="myfunc({{.ID}})">
+                                Book now
+                            </button>
+                            {{else}}
+                            <button class="btn btn-white text-uppercase text-nowrap me-2"><s>Booked</s></button>
+                            {{end}}
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+</div>
+<!--body content wrap end-->
+
+
+<!-- Footer Global Code Include Start---------------->
+<!--footer section start-->
+<footer class="footer-section">
+    <!--footer top start-->
+    <div>
+    </div>
+    <!--footer top end-->
+
+    <!--footer copyright start-->
+    <div class="footer-bottom gray-light-bg py-2">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-5 col-lg-5">
+                    <p class="copyright-text pb-0 mb-0">Copyrights © 2021. All
+                        rights reserved by
+                        <a href="/" target="_blank">LMS</a></p>
+                </div>
+                <div class="col-md-7 col-lg-6 d-none d-md-block d-lg-block">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer copyright end-->
+</footer>
+<!--footer section end-->
+<!-- Footer Global Code Include End---------------->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Booking Time</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form method="post" action="/bookingProcess">
+                <input type="hidden" name="ID" id="id">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Booking Start Time</label>
+                    <input class="form-control" name="ST" type="datetime-local" id="datefield1">
+                    <small class="text-danger"></small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Booking End Time</label>
+                    <input class="form-control" name="ET" type="datetime-local" id="datefield2">
+                    <small class="text-danger"></small>
+                </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-dark" value="Book Now">
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<!--jQuery-->
+<script src="../asset/assets/user/js/jquery-3.5.0.min.js"></script>
+<!--Popper js-->
+<script src="../asset/assets/user/js/popper.min.js"></script>
+<!--Bootstrap js-->
+<script src="../asset/assets/user/js/bootstrap.min.js"></script>
+<!--Magnific popup js-->
+<script src="../asset/assets/user/js/jquery.magnific-popup.min.js"></script>
+<!--jquery easing js-->
+<script src="../asset/assets/user/js/jquery.easing.min.js"></script>
+<!--jquery ytplayer js-->
+<script src="../asset/assets/user/js/jquery.mb.YTPlayer.min.js"></script>
+<!--Isotope filter js-->
+<script src="../asset/assets/user/js/mixitup.min.js"></script>
+<!--wow js-->
+<script src="../asset/assets/user/js/wow.min.js"></script>
+<!--owl carousel js-->
+<script src="../asset/assets/user/js/owl.carousel.min.js"></script>
+<!--countdown js-->
+<script src="../asset/assets/user/js/jquery.countdown.min.js"></script>
+<!--jquery easypiechart-->
+<script src="../asset/assets/user/js/jquery.easy-pie-chart.js"></script>
+<!--custom js-->
+<script src="../asset/assets/user/js/scripts.js"></script>
+<script>
+    function myfunc(ID) {
+        document.getElementById("id").value = ID
+    }
+</script>
+<script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1;
+    var yyyy = today.getFullYear();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    if(dd<10){
+    dd='0'+dd
+    } 
+    if(mm<10){
+    mm='0'+mm
+    } 
+    if(hr<10){
+    hr='0'+hr
+    } 
+    if(min<10){
+    min='0'+min
+    } 
+
+    today = yyyy+'-'+mm+'-'+dd+'T'+hr+':'+min; //2017-06-01T08:30
+    document.getElementById("datefield1").setAttribute("min", today);
+    document.getElementById("datefield2").setAttribute("min", today);
+</script>
+</body>
+</html>
